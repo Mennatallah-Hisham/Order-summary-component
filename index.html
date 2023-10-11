@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/86ec296f97.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css"/>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
@@ -16,28 +17,38 @@
 </head>
 <body>
     <main>
-        <div class="cont">
-            <section class="order-info">
-            <div class="img">
-                <img src="images/illustration-hero.svg" alt=""/>
-            </div>
+        <div class="container">
+            <article class="order-card">
+          
+                <img src="images/illustration-hero.svg" alt="illustration" aria-hidden="true">
+         
           
            
-                <h1>order summary</h1>
-                <p>you can now listen to millions of songs, audiobooks, and podcasta on any device anywhere you like!</p>
+                <h1 class="heading-primary">order summary</h1>
+                <p class="txt">you can now listen to millions of songs, audiobooks, and podcasta on any device anywhere you like!</p>
     
-                <section class="payment-plan row">
-                    
-                   <p> <i class="fas fa-music"></i> <span>annual plan</span>
-                    $59.99/year</p>
-                    <a href="#">change</a>
+                <div class="payment-plan row">
+                    <svg
+                    aria-hidden="true"
+                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
+                      </svg>
+                      
+                    <div>
+                        <p class="txt txt--bold"> annual plan</p>
+                  <p class="txt txt--secondary"> $59.99/year</p>
+
+                    </div>
+                   
+
+                    <a href="#" aria-label="change payment plan">change</a>
     
-                </section>
-                <section class="user-action ">
-                    <button class="pay">proceed to payment</button>
-                    <button class="cancelBtn">cancel order</button>
-                </section>
-            </section>
+                </div>
+                <div class="btns">
+                    <button class="btn btn--primary">proceed to payment</button>
+                    <button class="btn btn--secandary">cancel order</button>
+                </div>
+            </article>
         </div>
     </main>
   
