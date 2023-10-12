@@ -1,113 +1,133 @@
-:root{
-    --weight-1:500;
-    --weight-2:700;
-    --weight-3:900;
-    --font-size:16px;
-    --primary-color-paleBlue:hsl(225, 100%, 94%);
-    --primary-color-brightBlue:hsl(245, 75%, 52%);
-    --neutral-color-desaturatedBlue:hsl(224, 23%, 55%);
-    --neutral-color-darkBlue:hsl(223, 47%, 23%)
-    ;
-    --neutral-color-veryPaleBlue:hsl(225, 100%, 98%);
+:root {
+  --fw-1: 500;
+  --fw-2: 700;
+  --fw-3: 900;
+  --ff-: "Red Hat Display", sans-serif;
+  --fs-body: 1.6rem;
+  --fs-heading-primary:2.6rem;
+  --clr-bg: hsl(225, 100%, 94%);
+  --clr-bg-neutral-light:hsl(225, 100%, 98%);
+  --clr-white:hsl(0, 100%, 100%);
+  --primary-color-brightBlue: hsl(245, 75%, 52%);
+  --neutral-color-desaturatedBlue: hsl(224, 23%, 55%);
+  --clr-txt: hsl(223, 47%, 23%);
+
 }
 
-*{
-    padding:0;
-    margin:0;
-    font-family:'Red Hat Display', sans-serif;
-    font-size: 14px;
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+
+  font-family: inherit;
 }
-main{
-    height: 100vh;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    background-color: var(--primary-color-paleBlue);
+html {
+  font-size: 62.5%;
+  font-family: var(--ff-);
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 
-
-img{
-width:100%;
-border-top-left-radius:30px;
-border-top-right-radius:30px;
+button {
+  cursor: pointer;
+  margin-inline: auto;
+  padding: 0.8rem 2rem;
+  border-radius: 0.7rem;
+  outline: none;
+  border: none;
+  display: block;
 }
 
+/*****************************************************/
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-bg);
+}
 
-
-.order-info{
-    border-top-left-radius:30px;
-    border-top-right-radius:30px;
-    /* box-shadow: 2px -8px 8px 10px ; */
-    width:70%;
-    min-width:250px;
-    margin:0 auto;
-    text-align: center;
-   
-    padding:0em;
-    padding-bottom:2em;
-    background-color: aliceblue;
+.order-card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+ max-width: 32rem;
+  text-align: center;
+  background-color:var(--clr-white);
 }
-h1{
-    text-transform: capitalize;
-    margin-top:1em;
+.heading-primary {
+  font-size:var(--fs-heading-primary);
+  text-transform: capitalize;
+  color:var(--clr-txt);
 }
-p{
-    margin:1em auto;
-    max-width:250px;
-    color:var(--neutral-color-desaturatedBlue);
+.txt {
+  font-size:var(--fs-body);
+  line-height:1.4;
+    margin: 1em auto;
+  max-width: 250px;
+  color: var(--neutral-color-desaturatedBlue);
 }
-a{
-  
-    color:var(--primary-color-brightBlue);
-    margin: 0 1em;
-}
-a:hover{
-    opacity:0.7;
-}
-.row{
-    display: flex;
-    align-items:center;
-    justify-content:space-between;
-   
+.txt--bold{
  
+    font-weight:var(--fw-2);
+}
+.txt--cap{
+    text-transform:capitalize;
+}
 
+.payment-plan{
+    background-color:var(--clr-bg-neutral-light);
+    margin:2rem;
+    padding:0.2rem 0.4rem;
+
+    border-radius:0.5rem;
 }
- i{
-     color:rgb(105, 104, 104);
-     background-color: lightgray;
-     padding:0.3em;
-     border-radius: 50%;
- }
-.user-action{
-    width:40%;
-    min-width:150px;
-    display: flex;
-    flex-direction:column;
-    margin:0 auto;
-  
-}
-button{
-    margin-bottom:0.5em;
-    padding:0.5em 0;
-    border-radius:10px;
-    outline:none;
-    border:none;
-}
-.pay{
-    background-color:var(--primary-color-brightBlue);
-}
-.pay:hover{
-    background-color:var(--primary-color-brightBlue);
-    opacity: 0.7;
-    color:white;
+.payment-plan .txt--bold{
+    color:var(--clr-txt);
 }
 
 
-.cancelBtn{
-    color:var(--neutral-color-desaturatedBlue);
 
+
+
+a:link,
+a:visited {
+  color: var(--primary-color-brightBlue);
+  margin: 0 1em;
+}
+a:hover,
+a:active {
+  opacity: 0.7;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+i {
+  color: rgb(105, 104, 104);
+  background-color: lightgray;
+  padding: 0.3em;
+  border-radius: 50%;
 }
 
-.cancelBtn:hover{
-    color:black;
+.btn {
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: var(--primary-color-brightBlue);
+}
+.bnt:hover {
+  background-color: var(--primary-color-brightBlue);
+  opacity: 0.7;
+  color: white;
+}
+
+.btn-secondary {
+  color: var(--neutral-color-desaturatedBlue);
+}
+
+.btn-secondary:hover {
+  color: black;
 }
