@@ -3,13 +3,14 @@
   --fw-2: 700;
   --fw-3: 900;
   --ff-: "Red Hat Display", sans-serif;
-  --fs-body: 1.6rem;
+  --fs-body: 1.5rem;
   --fs-heading-primary:2.6rem;
   --clr-bg: hsl(225, 100%, 94%);
   --clr-bg-neutral-light:hsl(225, 100%, 98%);
+  --clr-neutral-dark: hsl(224, 23%, 55%);
   --clr-white:hsl(0, 100%, 100%);
-  --primary-color-brightBlue: hsl(245, 75%, 52%);
-  --neutral-color-desaturatedBlue: hsl(224, 23%, 55%);
+  --clr-accent: hsl(245, 75%, 52%);
+
   --clr-txt: hsl(223, 47%, 23%);
 
 }
@@ -32,17 +33,50 @@ img {
 }
 
 button {
+    width:100%;
   cursor: pointer;
   margin-inline: auto;
-  padding: 0.8rem 2rem;
+  padding: 1rem 3rem;
   border-radius: 0.7rem;
   outline: none;
   border: none;
   display: block;
+  font-size:1.4rem;
+  font-weight:var(--fw-2);
+
+}
+a:link,
+a:visited {
+  color: var(--clr-accent);
+  margin: 0 1em;
+  font-weight:var(--fw-2);
+  text-transform:capitalize
+}
+a:hover,
+a:active {
+  opacity: 0.8;
+  text-decoration:none;
 }
 
+
+
 /*****************************************************/
-main {
+.py-2{
+    padding:2rem 0;
+}
+.my-2{
+    margin-block:2rem;
+}
+
+.mb-2{
+    margin-bottom:2rem;
+}
+
+
+
+
+/****** utility ************/
+.main {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -67,7 +101,7 @@ main {
   line-height:1.4;
     margin: 1em auto;
   max-width: 250px;
-  color: var(--neutral-color-desaturatedBlue);
+  color: var(--clr-neutral-dark);
 }
 .txt--bold{
  
@@ -79,55 +113,59 @@ main {
 
 .payment-plan{
     background-color:var(--clr-bg-neutral-light);
-    margin:2rem;
-    padding:0.2rem 0.4rem;
+    margin:3rem;
+    padding:1.5rem 2rem;
 
-    border-radius:0.5rem;
+    border-radius:0.7rem;
 }
 .payment-plan .txt--bold{
     color:var(--clr-txt);
+    font-size:1.4rem;
 }
-
-
-
-
-
-a:link,
-a:visited {
-  color: var(--primary-color-brightBlue);
-  margin: 0 1em;
+.payment-plan .txt--secondary{
+    font-size:1.2rem;
+    text-align:left;
 }
-a:hover,
-a:active {
-  opacity: 0.7;
+.payment-plan p{
+    margin:0;
+}
+.icon{
+    width:2.8rem;
+    border-radius:50%;
+    color:var(--clr-neutral-dark);
+    padding:0.8rem;
+    background-color:var(--clr-bg);
+
 }
 .row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-i {
-  color: rgb(105, 104, 104);
-  background-color: lightgray;
-  padding: 0.3em;
-  border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+.btns{
+    margin-inline:3rem;
 }
 
 .btn {
-  font-size: 1.8rem;
-  color: #fff;
-  background-color: var(--primary-color-brightBlue);
+
+  color: var(--clr-white);
+  background-color: var(--clr-accent);
+  box-shadow: rgba(56, 41, 224,0.5) 0px 2px 24px;
 }
 .bnt:hover {
-  background-color: var(--primary-color-brightBlue);
-  opacity: 0.7;
-  color: white;
+ opacity:0.8;
+ 
 }
 
-.btn-secondary {
-  color: var(--neutral-color-desaturatedBlue);
+.btn--secondary {
+
+  color: var(--clr-neutral-dark);
+  background-color:transparent;
+  box-shadow:none;
 }
 
-.btn-secondary:hover {
-  color: black;
+.btn--secondary:hover {
+    color:var(--clr-txt);
 }
